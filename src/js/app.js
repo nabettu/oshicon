@@ -4,9 +4,24 @@ import Footer from "./components/Footer";
 import Painter from "./components/Painter";
 //@jsx h
 
+const image = document.createElement("img");
+image.src = "./assets/konintodoke.png";
+image.onload = () => {
+  if (main) {
+    main.updateImage();
+  }
+};
+const canvas = document.createElement("canvas");
+canvas.width = 1500;
+canvas.height = 1000;
+const context = canvas.getContext("2d");
+context.font = "20px 'APJapanesefontT'";
+context.textAlign = "center";
+
 const state = {
-  canvas: null,
-  image: null,
+  canvas,
+  context,
+  image,
   inputs: {
     husbandSurname: "",
     husbandName: "",
@@ -19,7 +34,7 @@ const state = {
   }
 };
 
-window.positions = {
+const positions = {
   husbandSurname: {
     x: 305,
     y: 300
@@ -73,18 +88,14 @@ const actions = {
     // setInterval(() => {
     //   actions.updateImage();
     // }, 500);
-    return {
-      canvas,
-      context
-    };
+    return { canvas, context };
   },
-  setImage: elm => state => ({ image: elm }),
-  updateImage: e => state => {
+  updateImage: e => (state, actions) => {
     // console.log(state.canvas);
-    console.log(state);
+    // console.log(state);
     state.context.drawImage(state.image, 0, 0);
     Object.keys(positions).map(keys => {
-      console.log(keys);
+      // console.log(state.inputs[keys]);
       if (state.inputs[keys]) {
         state.context.fillText(
           state.inputs[keys],
@@ -93,7 +104,10 @@ const actions = {
         );
       }
     });
-  }
+    // console.log("base64");
+    actions.setBase64(state.canvas.toDataURL());
+  },
+  setBase64: data => state => ({ base64: data })
 };
 
 const view = (state, actions) => (
@@ -104,4 +118,4 @@ const view = (state, actions) => (
   </main>
 );
 
-export const main = app(state, actions, view, document.body);
+const main = app(state, actions, view, document.body);

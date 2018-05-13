@@ -46,19 +46,6 @@ export default ({ state, actions }) => (
         />
       </p>
     </div>
-    <canvas
-      className="canvas"
-      width="1500"
-      height="1000"
-      oncreate={elm => {
-        const image = document.createElement("img");
-        image.src = "./assets/konintodoke.png";
-        image.onload = () => {
-          actions.setCanvas(elm);
-          actions.setImage(image);
-          actions.updateImage();
-        };
-      }}
-    />
+    <img className="canvas" width="1500" height="1000" src={state.base64} />
   </div>
 );
