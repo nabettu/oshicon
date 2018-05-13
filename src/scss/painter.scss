@@ -1,0 +1,28 @@
+.painter {
+  p {
+    margin: 0 auto;
+  }
+
+  canvas {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #999;
+    margin: 20px auto 50px;
+  }
+
+  input {
+    font-size: 20px;
+    width: 150px;
+    margin: 10px;
+    border: 1px solid #aaa;
+  }
+
+  label {
+    display: inline-block;
+    width: 100px;
+
+    &.second {
+      width: 50px;
+    }
+  }
+}

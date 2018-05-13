@@ -1,0 +1,30 @@
+{
+  "name": "oshicon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "4": "^0.0.0",
+    "hyperapp": "^1.2.5",
+    "node-sass": "^4.9.0",
+    "parcel-bundler": "^1.8.1",
+    "reset.css": "^2.0.2"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-hyperapp": "^2.3.0",
+    "jsx-parser": "^1.0.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "remove": "rm ./docs/main.*",
+    "build":
+      "npm run remove && parcel build src/index.html -d docs --no-source-maps --public-url /oshicon/",
+    "dev": "parcel src/index.html -d docs --open --no-source-maps"
+  },
+  "author": "",
+  "license": "ISC"
+}

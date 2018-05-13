@@ -1,0 +1,40 @@
+footer {
+  padding-bottom: 50px;
+
+  p {
+    margin: 0 auto 20px;
+  }
+
+  button {
+    font-size: 18px;
+    width: 140px;
+    height: 40px;
+    margin: 0 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &.tw {
+      background-color: #00acee;
+    }
+
+    &.fb {
+      background-color: #1f6aba;
+    }
+
+    &.line {
+      background-color: #00c300;
+    }
+
+    &.copy {
+      background-color: #aaa;
+    }
+  }
+}
