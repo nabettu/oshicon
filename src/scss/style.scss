@@ -1,6 +1,12 @@
-body {
-  font-family: "";
+@font-face {
+  font-family: "APJapanesefontT";
+  src: url("../font/APJapanesefontT.ttf");
+}
+
+main {
+  font-family: "APJapanesefontT", "ヒラギノ丸ゴ Pro W3", "Hiragino Maru Gothic Pro", sans-serif;
   font-size: 20px;
+  padding: 10px;
 
   p {
     font-size: 15px;

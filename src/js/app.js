@@ -68,7 +68,7 @@ const actions = {
   },
   setCanvas: canvas => (state, actions) => {
     const context = canvas.getContext("2d");
-    context.font = "20px 'ＭＳ Ｐゴシック'";
+    context.font = "20px 'APJapanesefontT'";
     context.textAlign = "center";
     // setInterval(() => {
     //   actions.updateImage();

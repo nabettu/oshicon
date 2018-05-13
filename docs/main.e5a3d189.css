@@ -45,24 +45,31 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}body {
-  font-family: "";
-  font-size: 20px; }
-  body p {
+}@charset "UTF-8";
+@font-face {
+  font-family: "APJapanesefontT";
+  src: url("APJapanesefontT.e94cf592.ttf"); }
+
+main {
+  font-family: "APJapanesefontT", "ヒラギノ丸ゴ Pro W3", "Hiragino Maru Gothic Pro", sans-serif;
+  font-size: 20px;
+  padding: 10px; }
+  main p {
     font-size: 15px;
     line-height: 1.5em; }
 
 .header {
   height: 50px;
-  padding: 10px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center; }
   .header h1 {
     margin-right: 20px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold; }
+  .header p {
+    font-size: 13px; }
 
 footer {
   padding-bottom: 50px; }
@@ -102,11 +109,11 @@ footer {
 .painter input {
   font-size: 20px;
   width: 150px;
-  margin: 10px;
+  margin: 5px;
   border: 1px solid #aaa; }
 
 .painter label {
   display: inline-block;
-  width: 100px; }
+  width: 110px; }
   .painter label.second {
-    width: 50px; }
+    width: 40px; }

@@ -171,7 +171,7 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":11}],14:[function(require,module,exports) {
+},{"./../font/APJapanesefontT.ttf":[["APJapanesefontT.e94cf592.ttf",55],55],"_css_loader":11}],14:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1067,7 +1067,7 @@ var actions = {
   setCanvas: function setCanvas(canvas) {
     return function (state, actions) {
       var context = canvas.getContext("2d");
-      context.font = "20px 'ＭＳ Ｐゴシック'";
+      context.font = "20px 'APJapanesefontT'";
       context.textAlign = "center";
       // setInterval(() => {
       //   actions.updateImage();
@@ -1117,7 +1117,7 @@ require("reset.css");
 require("./scss/style.scss");
 
 require("./js/app");
-},{"reset.css":39,"./scss/style.scss":6,"./js/app":7}],54:[function(require,module,exports) {
+},{"reset.css":39,"./scss/style.scss":6,"./js/app":7}],59:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -1287,4 +1287,4 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[54,4], null)
+},{}]},{},[59,4], null)
