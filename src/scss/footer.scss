@@ -6,7 +6,7 @@ footer {
   }
 
   button {
-    font-size: 18px;
+    font-size: 16px;
     width: 140px;
     height: 40px;
     margin: 0 10px;
@@ -15,6 +15,7 @@ footer {
     color: #fff;
     border-radius: 5px;
     border: none;
+    white-space: nowrap;
     cursor: pointer;
 
     &:hover {
