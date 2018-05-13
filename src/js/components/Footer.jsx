@@ -2,11 +2,11 @@ import { h } from "hyperapp";
 import sns from "../lib/sns";
 
 function snsClick(type, state) {
-  let text = "婚姻届に名前が書ける。証人にもなれる。";
+  let text = "「婚姻届に名前を書いたら」がシュミレーション出来るサイト";
   if (state.inputs.husbandFullname && state.inputs.wifeFullname) {
     text = `${state.inputs.husbandFullname}と${
       state.inputs.wifeFullname
-    }の婚姻届を書いてみたよ。`;
+    }の婚姻届を書いてみたよ。 | 「婚姻届に名前を書いたら」がシュミレーション出来るサイト`;
   }
   sns({ type, url: location.href, text, hashtags: ["oshicon"] });
 }
