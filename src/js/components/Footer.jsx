@@ -8,12 +8,7 @@ function snsClick(type, state) {
       state.inputs.wifeFullname
     }の婚姻届を書いてみたよ。`;
   }
-  sns({
-    type,
-    url: location.href,
-    text,
-    hashtags: ["oshicon"]
-  });
+  sns({ type, url: location.href, text, hashtags: ["oshicon"] });
 }
 
 export default ({ state }) => (
