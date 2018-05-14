@@ -2,18 +2,19 @@ import { h, app } from "hyperapp";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Painter from "./components/Painter";
+import img from "../img/konintodoke.png";
 //@jsx h
 
 const image = document.createElement("img");
-image.src = "./assets/konintodoke.png";
+image.src = img;
 image.onload = () => {
   if (main) {
     main.updateImage();
   }
 };
 const canvas = document.createElement("canvas");
-canvas.width = 1500;
-canvas.height = 1000;
+canvas.width = 1300;
+canvas.height = 900;
 const context = canvas.getContext("2d");
 context.font = "20px 'APJapanesefontT'";
 context.textAlign = "center";
@@ -36,36 +37,36 @@ const state = {
 
 const positions = {
   husbandSurname: {
-    x: 305,
-    y: 300
+    x: 205,
+    y: 250
   },
   husbandName: {
-    x: 420,
-    y: 300
+    x: 320,
+    y: 250
   },
   wifeSurname: {
-    x: 540,
-    y: 300
+    x: 440,
+    y: 250
   },
   wifeName: {
-    x: 660,
-    y: 300
+    x: 560,
+    y: 250
   },
   husbandFullname: {
-    x: 360,
-    y: 925
+    x: 260,
+    y: 875
   },
   wifeFullname: {
-    x: 600,
-    y: 925
+    x: 500,
+    y: 875
   },
   witness1: {
-    x: 1010,
-    y: 288
+    x: 910,
+    y: 238
   },
   witness2: {
-    x: 1260,
-    y: 288
+    x: 1160,
+    y: 238
   }
 };
 
